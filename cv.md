@@ -12,3 +12,6 @@ Suvorov Sergey;
 + Completed the ZarMarathon course. Wrote a cool game in JS.
 #### Education
 + Moscow Aviation Institute, informatics and computer engineering, bachelor;
+#### Language level
++ Russian - native speaker;
++ English - A2;
