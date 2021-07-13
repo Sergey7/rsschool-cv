@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+ul { list-style: none; }
+
+a { 
+    text-decoration: none; 
+    color: blue;
+}
+
+html {
+    font-size: 16px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    max-width: 700px;
+    min-width: 700px;
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important; 
+	width: 1px !important; 
+	overflow: hidden;
+}
+
+.header {
+    padding-top: 30px;
+    padding-bottom: 35px;
+    border-bottom: 4px solid black;
+}
+
+.header_name {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.header_position {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.personal {
+    display: grid;
+    grid-template-columns: 2fr 150px;
+    padding-top: 10px;
+    column-gap: 50px;
+    margin-bottom: 30px;
+}
+
+.personal__avatar {
+    max-width: 100%;
+    width: 150px;
+    grid-column:  2 / -1;
+    justify-self: end;
+}
+
+.personal__contacts { grid-column: 1 / 2; }
+
+.info-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 10px;
+    border-bottom: 1px dashed gray;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    margin-bottom: 20px;
+}
+
+.header-grey {
+    color: gray;
+    grid-column: 1 / 2;
+}
+
+.ozon-link {
+    color: blue;
+    font-weight: 700;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skills-item { margin-right: 5px; }
+
+.experience-item,
+.examples-item { 
+    margin-bottom: 5px; 
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 50px 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.contacts__list {
+    justify-self: start;
+}
+
+.contacts__item {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    padding-bottom: 10px;
+}
+
+.rs-link { justify-self: end; }
+
+.year-start { margin-left: 100px; }
+
+.rs-img {
+    width: 100px;
+    height: 50px;
+}
