@@ -5,27 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suvorov Sergey  </title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body>
   <header class="header">
-    <h1 class="header_name">Suvorov Sergey Sergeevich</h1>
-    <p class="header_position">Frontend developer</p>
+    <div class="header__info">
+      <h1 class="header_name">Suvorov Sergey</h1>
+      <p class="header_position">Frontend developer</p>
+    </div>
+    <nav class="main-nav">
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#personal">contacts</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#about">about me</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#skills">my skills</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#experience">work experience</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#work">my works</a>
+        </li>
+      </ul>
+      <button class="nav__burger-close"></button>
+    </nav>
+    <button class="nav__burger"></button>
   </header>
   <main>
-    <section class="personal">
-      <h2 class="visually-hidden">Personal information</h2>
+    <aside class="personal">
+      <img class="personal__avatar" src="avatar.jpg" alt="My foto">
       <div class="personal__info">
+      <h2 class="header-block" id="personal" >Contacts</h2>
         <ul class="info__list">
           <li class="info-item">
-            <p class="item__name">Tel:</p> 
-            <p class="item__name-value">
-              <a href="tel:+79060291533">+7-906-029-15-33</a>
+            <p class="item__name">Email:</p> 
+            <p class="item__name-value item__name-value--mail">
+              <a href="tomail:ser.suvorov345@gmail.com">ser.suvorov345@gmail.com</a>
             </p>
           </li>
           <li class="info-item">
-            <p class="item__name">Email:</p> 
-            <p class="item__name-value">
-              <a href="tomail:ser.suvorov345@gmail.com">ser.suvorov345@gmail.com</a>
+            <p class="item__name">Telegram:</p> 
+            <p class="item__name-value item__name-value--telegram">
+              <a href="https://t.me/suvsergey">
+                https://t.me/suvsergey</a>
+            </p>
+          </li>
+          <li class="info-item">
+            <p class="item__name">Github:</p> 
+            <p class="item__name-value item__name-value--github">
+              <a href="github.com/Sergey7">github.com/Sergey7</a>
             </p>
           </li>
           <li class="info-item">
@@ -37,10 +71,6 @@
             <p class="item__name-value">Moscow, Russia</p>
           </li>
           <li class="info-item">
-            <p class="item__name">Salary expectations:</p> 
-            <p class="item__name-value">1 000$</p>
-          </li>
-          <li class="info-item">
             <p class="item__name">Language:</p> 
             <p class="item__name-value">
               <span>Russian - native speaker<br></span>
@@ -49,18 +79,18 @@
           </li>
         </ul>
       </div>
-      <img class="personal__avatar" src="avatar.jpg" alt="My foto">
-    </section>
+    </aside>
+    <div class="right-main">
     <article class="about">
-      <div class="about-wrapper grid-container">
-        <h2 class="about__header header-grey">About me</h2>
+      <div class="about-wrapper">
+        <h2 class="about__header header-block" id="about">About me</h2>
         <p class="about__text">I am developing in the field of front-end development. 
                               In the near future I want to master react and start making really cool applications.
                               I draw inspiration from the <a class="ozon-link" href="https://www.ozon.ru/">OZON</a> 
-                              website, I hope I get something like that;</p> 
+                              website, I hope I get something like that.</p> 
       </div>
-      <div class="about__skills grid-container">
-        <h2 class="skills__header header-grey">My skills</h2>
+      <div class="about__skills">
+        <h2 class="skills__header header-block" id="skills">My skills</h2>
         <ul class="skills-list">
           <li class="skills-item">HTML</li>
           <li class="skills-item">CSS</li>
@@ -73,15 +103,30 @@
       </div>
     </article>
     <article class="work">
-      <div class="work__experience grid-container">
-        <h2 class="experience__header header-grey">Work experience</h2>
+      <div class="work__experience">
+        <h2 class="experience__header header-block" id="experience">Work experience</h2>
         <ul class="experience-list">
           <li class="experience-item">Completed the ZarMarathon marathon. Wrote a cool game in JS.</li>
           <li class="experience-item">Solve kats on the codewars.com</li>
         </ul>
+        <h3 class="example-header">Example of my code</h3>
+        <pre><code class="js code-example">
+function cache(func) {
+  let c = {};
+  return function() {
+    let args = JSON.stringify(arguments);
+    if (c.hasOwnProperty(args)) {
+      return c[args];
+    }
+    else {
+      return (c[args] = func(...arguments));
+    }
+  }
+}
+      </code></pre>
       </div>
       <div class="work__examples grid-container">
-        <h2 class="examples__header header-grey">My works</h2>
+        <h2 class="examples__header header-block" id="work">My works</h2>
         <ul class="examples-list">
           <li class="examples-item">
             <a class="examples-item__link" href="https://github.com/Sergey7/MortalCombatJS">ZarMarathon marathon</a>
@@ -92,11 +137,12 @@
       </div>
     </article>
     <article class="education grid-container"> 
-      <h2 class="education__header header-grey">Education</h2>
+      <h2 class="education__header header-block">Education</h2>
       <ul class="education-list">
         <li class="education-item">Moscow Aviation Institute, Informatics and computer engineering, Bachelor</li>
       </ul>
     </article>
+  </div>
   </main>
   <footer class="footer">
     <ul class="contacts__list">
@@ -118,5 +164,6 @@
       <img class="rs-img" src="rs_school_js.svg" alt="Логотип RS.School">
     </a>
   </footer>
+  <script src="app.js"></script>
 </body>
 </html>
