@@ -16,6 +16,7 @@ html {
     font-size: 16px;
     color: black;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5d8a9;
 }
 
 body {
@@ -28,6 +29,8 @@ body {
 main {
     display: flex;
 }
+
+
 
 .visually-hidden {
 	position: absolute !important;
@@ -269,6 +272,9 @@ main {
     display: none;
 }
 
+.nav__burger-close {
+    display: none;
+}
 
 @media (max-width: 1050px) {
     .about__text {
@@ -323,7 +329,13 @@ main {
         display: none;
     }
 
+    .nav__burger-close {
+        display: block;
+        cursor: pointer;
+    }
+    
     .nav__burger {
+        cursor: pointer;
         display: block;
         width: 32px;
         height: 18px;
